@@ -1,0 +1,257 @@
+[
+  {
+    "id": "bisagra-cadera",
+    "actualizado": 1790265600000,
+    "descripcion": "De pie, con las rodillas ligeramente flexionadas. Inclina el tronco hacia delante llevando la cadera atrás, con la espalda recta, hasta quedar casi horizontal. Vuelve a subir apretando los glúteos.\n\n3 series de 12-15 repeticiones.",
+    "descripcion_en": "Stand with knees slightly bent. Lean your torso forward by pushing your hips back, keeping your back straight, until you're almost horizontal. Come back up by squeezing your glutes.\n\n3 sets of 12-15 reps.",
+    "grupo": "Espalda",
+    "imagen": "d8b33b18308863afcba2cfdd1a08c8ec",
+    "imagenFin": "e21a1565695b6d8a0088a8e7c383afb3",
+    "imagenInicio": "d8b33b18308863afcba2cfdd1a08c8ec",
+    "nombre": "Bisagra de cadera",
+    "nombre_en": "Hip hinge",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/bisagra-cadera-start.svg",
+      "end": "assets/exercises/bisagra-cadera-end.svg"
+    }
+  },
+  {
+    "id": "crunch",
+    "actualizado": 1790236800000,
+    "descripcion": "Tumbado boca arriba con las rodillas dobladas. Despega los hombros del suelo llevando las manos hacia las rodillas, sin tirar del cuello. Baja con control.\n\n3 series de 15-20 repeticiones.",
+    "descripcion_en": "Lie on your back with knees bent. Lift your shoulders off the floor reaching your hands toward your knees, without pulling on your neck. Lower with control.\n\n3 sets of 15-20 reps.",
+    "grupo": "Core",
+    "imagen": "1c23d04223edb60999ca57c025afbfc1",
+    "imagenFin": "4023cf857c4dc3855f4465aae96b045b",
+    "imagenInicio": "1c23d04223edb60999ca57c025afbfc1",
+    "nombre": "Crunch abdominal",
+    "nombre_en": "Crunch",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/crunch-start.svg",
+      "end": "assets/exercises/crunch-end.svg"
+    }
+  },
+  {
+    "id": "elevacion-piernas",
+    "actualizado": 1790265600000,
+    "descripcion": "Tumbado boca arriba con las piernas estiradas y los brazos junto al cuerpo. Sube las piernas juntas hasta la vertical sin despegar la zona lumbar del suelo y bájalas despacio.\n\n3 series de 10-12 repeticiones.",
+    "descripcion_en": "Lie on your back with legs straight and arms by your sides. Lift your legs together to vertical without arching your lower back off the floor, then lower them slowly.\n\n3 sets of 10-12 reps.",
+    "grupo": "Core",
+    "imagen": "2f293f6eaef1d92ad891d3b21ccc6004",
+    "imagenFin": "8100be8746cfb3b56a75abeecbd5c9a9",
+    "imagenInicio": "2f293f6eaef1d92ad891d3b21ccc6004",
+    "nombre": "Elevación de piernas",
+    "nombre_en": "Leg raise",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/elevacion-piernas-start.svg",
+      "end": "assets/exercises/elevacion-piernas-end.svg"
+    }
+  },
+  {
+    "id": "elevacion-talones",
+    "actualizado": 1790236800000,
+    "descripcion": "De pie, sube sobre la punta de los pies levantando los talones todo lo que puedas. Mantén un segundo arriba y baja despacio. Trabaja los gemelos.\n\n3 series de 20 repeticiones.",
+    "descripcion_en": "Stand and rise onto the balls of your feet, lifting your heels as high as you can. Hold for a second at the top and lower slowly. Works the calves.\n\n3 sets of 20 reps.",
+    "grupo": "Piernas",
+    "imagen": "7c2887a99d412cf007b95f9ef9aae9db",
+    "imagenFin": "c2a73c2081c05b8ca05e401dbef88903",
+    "imagenInicio": "7c2887a99d412cf007b95f9ef9aae9db",
+    "nombre": "Elevación de talones",
+    "nombre_en": "Calf raise",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/elevacion-talones-start.svg",
+      "end": "assets/exercises/elevacion-talones-end.svg"
+    }
+  },
+  {
+    "id": "escaladores",
+    "actualizado": 1790236800000,
+    "descripcion": "En plancha con los brazos estirados. Lleva una rodilla hacia el pecho y vuelve atrás, alternando piernas a ritmo rápido sin levantar la cadera.\n\n3 series de 30 segundos.",
+    "descripcion_en": "In a plank with straight arms, drive one knee toward your chest and back, alternating legs at a fast pace without raising your hips.\n\n3 sets of 30 seconds.",
+    "grupo": "Cuerpo completo",
+    "imagen": "3832ef80828a381c298689bc32759953",
+    "imagenFin": "25269256b34cc8f02c2aafe0ea2b4016",
+    "imagenInicio": "3832ef80828a381c298689bc32759953",
+    "nombre": "Escaladores",
+    "nombre_en": "Mountain climbers",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/escaladores-start.svg",
+      "end": "assets/exercises/escaladores-end.svg"
+    }
+  },
+  {
+    "id": "flexion-pica",
+    "actualizado": 1790265600000,
+    "descripcion": "Con manos y pies en el suelo y la cadera alta, formando una V invertida. Dobla los codos para acercar la cabeza al suelo entre las manos y vuelve a estirar los brazos.\n\n3 series de 6-10 repeticiones.",
+    "descripcion_en": "With hands and feet on the floor and hips high, forming an upside-down V. Bend your elbows to bring your head toward the floor between your hands, then straighten your arms.\n\n3 sets of 6-10 reps.",
+    "grupo": "Hombros",
+    "imagen": "576bd41a6a7da95f6499e3e53cd7cd1b",
+    "imagenFin": "9c119383d185bdbf034182485e683c8b",
+    "imagenInicio": "576bd41a6a7da95f6499e3e53cd7cd1b",
+    "nombre": "Flexión en pica",
+    "nombre_en": "Pike push-up",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/flexion-pica-start.svg",
+      "end": "assets/exercises/flexion-pica-end.svg"
+    }
+  },
+  {
+    "id": "flexion",
+    "actualizado": 1790236800000,
+    "descripcion": "En plancha con los brazos estirados y las manos bajo los hombros. Baja el pecho hacia el suelo con el cuerpo recto y vuelve a subir.\n\n3 series de 8-12 repeticiones. Si cuesta, apoya las rodillas.",
+    "descripcion_en": "Start in a plank with straight arms and hands under your shoulders. Lower your chest toward the floor keeping your body straight, then push back up.\n\n3 sets of 8-12 reps. If it's too hard, rest on your knees.",
+    "grupo": "Pecho",
+    "imagen": "952ef57ca533c5313a85c793b711346c",
+    "imagenFin": "0ed4a4e8587b4eb62e8dc7edbead721e",
+    "imagenInicio": "952ef57ca533c5313a85c793b711346c",
+    "nombre": "Flexión",
+    "nombre_en": "Push-up",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/flexion-start.svg",
+      "end": "assets/exercises/flexion-end.svg"
+    }
+  },
+  {
+    "id": "jumping-jacks",
+    "actualizado": 1790236800000,
+    "descripcion": "De pie con los pies juntos y los brazos a los lados. Salta abriendo las piernas y subiendo los brazos por encima de la cabeza, y vuelve a cerrar de otro salto.\n\n3 series de 30 segundos.",
+    "descripcion_en": "Stand with feet together and arms at your sides. Jump your legs apart while raising your arms overhead, then jump back together.\n\n3 sets of 30 seconds.",
+    "grupo": "Cardio",
+    "imagen": "b931da3669531f8192c8436c5361bbd4",
+    "imagenFin": "f0df914c096d36af16c15a77efbb1ee1",
+    "imagenInicio": "b931da3669531f8192c8436c5361bbd4",
+    "nombre": "Jumping jacks",
+    "nombre_en": "Jumping jacks",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/jumping-jacks-start.svg",
+      "end": "assets/exercises/jumping-jacks-end.svg"
+    }
+  },
+  {
+    "id": "patada-gluteo",
+    "actualizado": 1790265600000,
+    "descripcion": "A cuatro patas, con las manos bajo los hombros y las rodillas bajo la cadera. Eleva una pierna hacia atrás con la rodilla doblada, empujando la planta hacia el techo. Baja sin apoyar y repite.\n\n3 series de 12 por pierna.",
+    "descripcion_en": "On all fours, with hands under shoulders and knees under hips. Lift one leg back with the knee bent, pushing the sole of your foot toward the ceiling. Lower without touching down and repeat.\n\n3 sets of 12 per leg.",
+    "grupo": "Glúteos",
+    "imagen": "63ac3210a080da25757d2fb66e5de84b",
+    "imagenFin": "a03cf6310b25c2f6f1fef5ba5adb3161",
+    "imagenInicio": "63ac3210a080da25757d2fb66e5de84b",
+    "nombre": "Patada de glúteo",
+    "nombre_en": "Donkey kick",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/patada-gluteo-start.svg",
+      "end": "assets/exercises/patada-gluteo-end.svg"
+    }
+  },
+  {
+    "id": "puente",
+    "actualizado": 1790236800000,
+    "descripcion": "Tumbado boca arriba con las rodillas dobladas y los pies apoyados. Eleva la cadera apretando los glúteos hasta alinear hombros, cadera y rodillas. Baja despacio.\n\n3 series de 15 repeticiones.",
+    "descripcion_en": "Lie on your back with knees bent and feet flat. Lift your hips by squeezing your glutes until shoulders, hips and knees are in line. Lower slowly.\n\n3 sets of 15 reps.",
+    "grupo": "Glúteos",
+    "imagen": "01ccfdd5e9ca90f9aba0fcd6b1bcbf64",
+    "imagenFin": "dc7462be57e804ac0a3c86535fd5b54f",
+    "imagenInicio": "01ccfdd5e9ca90f9aba0fcd6b1bcbf64",
+    "nombre": "Puente de glúteos",
+    "nombre_en": "Glute bridge",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/puente-start.svg",
+      "end": "assets/exercises/puente-end.svg"
+    }
+  },
+  {
+    "id": "rodillas-arriba",
+    "actualizado": 1790236800000,
+    "descripcion": "De pie, eleva una rodilla hasta la altura de la cadera mientras balanceas el brazo contrario, y alterna piernas a ritmo de carrera en el sitio.\n\n3 series de 30 segundos.",
+    "descripcion_en": "Stand and raise one knee to hip height while swinging the opposite arm, alternating legs as if running in place.\n\n3 sets of 30 seconds.",
+    "grupo": "Cardio",
+    "imagen": "0251259251637111604cfb9e09c99c75",
+    "imagenFin": "7ea183c452e715ad968c1629ceffbfc5",
+    "imagenInicio": "0251259251637111604cfb9e09c99c75",
+    "nombre": "Rodillas arriba",
+    "nombre_en": "High knees",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/rodillas-arriba-start.svg",
+      "end": "assets/exercises/rodillas-arriba-end.svg"
+    }
+  },
+  {
+    "id": "sentadilla-salto",
+    "actualizado": 1790265600000,
+    "descripcion": "Baja a una sentadilla profunda con los brazos atrás. Salta con fuerza estirando todo el cuerpo y llevando los brazos arriba. Aterriza suave y vuelve a bajar.\n\n3 series de 10 repeticiones.",
+    "descripcion_en": "Drop into a deep squat with arms back. Jump explosively, extending your whole body and swinging your arms up. Land softly and go straight back down.\n\n3 sets of 10 reps.",
+    "grupo": "Cardio",
+    "imagen": "8959d1a0215c8738ab55b6462deaaece",
+    "imagenFin": "cd49fc330be7be848ff8d1eb18210c83",
+    "imagenInicio": "8959d1a0215c8738ab55b6462deaaece",
+    "nombre": "Sentadilla con salto",
+    "nombre_en": "Jump squat",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/sentadilla-salto-start.svg",
+      "end": "assets/exercises/sentadilla-salto-end.svg"
+    }
+  },
+  {
+    "id": "sentadilla",
+    "actualizado": 1790236800000,
+    "descripcion": "De pie, pies al ancho de los hombros. Baja la cadera hacia atrás como si fueras a sentarte hasta que los muslos queden paralelos al suelo, con los brazos al frente. Sube empujando con los talones.\n\n3 series de 12-15 repeticiones.",
+    "descripcion_en": "Stand with feet shoulder-width apart. Push your hips back as if sitting down until your thighs are parallel to the floor, arms out in front. Drive up through your heels.\n\n3 sets of 12-15 reps.",
+    "grupo": "Piernas",
+    "imagen": "9e5c1d71520ad7e6f04373f8bc3ef1d1",
+    "imagenFin": "7d98e45bd734131c371308b75098474f",
+    "imagenInicio": "9e5c1d71520ad7e6f04373f8bc3ef1d1",
+    "nombre": "Sentadilla",
+    "nombre_en": "Squat",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/sentadilla-start.svg",
+      "end": "assets/exercises/sentadilla-end.svg"
+    }
+  },
+  {
+    "id": "superman",
+    "actualizado": 1790236800000,
+    "descripcion": "Tumbado boca abajo con los brazos estirados al frente. Eleva a la vez brazos, pecho y piernas unos centímetros del suelo, mantén dos segundos y baja.\n\n3 series de 12 repeticiones.",
+    "descripcion_en": "Lie face down with arms stretched out in front. Lift your arms, chest and legs a few centimeters off the floor at the same time, hold for two seconds and lower.\n\n3 sets of 12 reps.",
+    "grupo": "Espalda",
+    "imagen": "6dbc9a805008d13ed920a6e7a8ae2d18",
+    "imagenFin": "3f07ba8d07946e98f9cc6e2830412dc5",
+    "imagenInicio": "6dbc9a805008d13ed920a6e7a8ae2d18",
+    "nombre": "Superman",
+    "nombre_en": "Superman",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/superman-start.svg",
+      "end": "assets/exercises/superman-end.svg"
+    }
+  },
+  {
+    "id": "zancada",
+    "actualizado": 1790236800000,
+    "descripcion": "De pie, da un paso largo al frente y baja hasta que ambas rodillas formen un ángulo recto, sin que la rodilla trasera toque el suelo. Vuelve a la posición inicial y alterna piernas.\n\n3 series de 10 por pierna.",
+    "descripcion_en": "From standing, take a long step forward and lower until both knees are at a right angle, without the back knee touching the floor. Return to standing and switch legs.\n\n3 sets of 10 per leg.",
+    "grupo": "Piernas",
+    "imagen": "4d85fd7b5a99b1ab7860d38c44d6035c",
+    "imagenFin": "f29f1e7ef7b6408f1bcb12f8c63c07be",
+    "imagenInicio": "4d85fd7b5a99b1ab7860d38c44d6035c",
+    "nombre": "Zancada",
+    "nombre_en": "Lunge",
+    "peso": "corporal",
+    "files": {
+      "start": "assets/exercises/zancada-start.svg",
+      "end": "assets/exercises/zancada-end.svg"
+    }
+  }
+]

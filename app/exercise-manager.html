@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mis ejercicios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EAF1EE; --ink:#15302E; --soft:#5B706D; --line:#C9D8D3;
+  --accent:#2F6F6A; --mark:#F2C14E; --field:#FFFFFF; --danger:#C2453A;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10201F; --ink:#E4EFEB; --soft:#9DB3AE; --line:#2A403D;
+    --accent:#7CC2B9; --field:#172C2A; --danger:#E77B70;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10201F; --ink:#E4EFEB; --soft:#9DB3AE; --line:#2A403D;
+  --accent:#7CC2B9; --field:#172C2A; --danger:#E77B70;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:52rem;margin:0 auto;padding:2rem 1.25rem 4rem}
+header{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+h1{font-size:clamp(2.2rem,8vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin:0;line-height:1}
+.sub{color:var(--soft);margin:.4rem 0 0}
+.btn{font:inherit;font-size:1.05rem;font-weight:600;border-radius:999px;padding:.75rem 1.4rem;cursor:pointer;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.danger{background:transparent;color:var(--danger);border-color:var(--danger)}
+.btn:disabled{opacity:.4;cursor:default}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+.toolbar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.toolbar input,.toolbar select{flex:1;min-width:10rem}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--field);border:2px solid var(--line);border-radius:12px;padding:.7rem .9rem;width:100%}
+textarea{min-height:6rem;resize:vertical;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:1rem}
+.card{background:var(--field);border:2px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;display:flex;flex-direction:column}
+.card:hover{border-color:var(--accent)}
+.thumb{aspect-ratio:4/3;background:var(--line);display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:2.5rem}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card-body{padding:.9rem 1rem 1rem}
+.card h2{font-size:1.2rem;margin:0 0 .35rem;font-weight:600}
+.pill{display:inline-block;background:var(--mark);color:#15302E;font-size:.85rem;font-weight:600;padding:.15rem .6rem;border-radius:6px}
+.empty{border:2px dashed var(--line);border-radius:16px;padding:3rem 1.5rem;text-align:center;color:var(--soft)}
+.empty strong{display:block;color:var(--ink);font-size:1.3rem;margin-bottom:.4rem}
+dialog{border:0;border-radius:20px;padding:0;width:min(34rem,calc(100% - 1.5rem));max-height:calc(100% - 2rem);background:var(--bg);color:var(--ink)}
+dialog::backdrop{background:rgba(10,25,24,.55)}
+.dlg{padding:1.5rem}
+.dlg h2{margin:0 0 1.2rem;font-size:1.6rem;font-weight:800}
+.field{margin-bottom:1rem}
+.field label{display:block;font-weight:600;margin-bottom:.35rem}
+.drop{border:2px dashed var(--line);border-radius:14px;padding:1rem;text-align:center;color:var(--soft);cursor:pointer;position:relative}
+.drop img{max-width:100%;max-height:14rem;border-radius:10px;display:block;margin:0 auto .6rem}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.row{display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap;margin-top:1.4rem}
+.row .spacer{flex:1}
+.detail-img{width:100%;border-radius:14px;display:block;margin-bottom:1rem;max-height:20rem;object-fit:cover}
+.detail-desc{line-height:1.6;white-space:pre-wrap;margin:1rem 0 0}
+.msg{color:var(--danger);min-height:1.3rem;margin:.5rem 0 0}
+.notice{background:var(--field);border:2px solid var(--line);border-radius:14px;padding:1rem;margin-bottom:1.5rem;color:var(--soft)}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Mis ejercicios</h1>
+      <p class="sub" id="count">Cargando…</p>
+    </div>
+    <button class="btn primary" id="addBtn" disabled>Añadir ejercicio</button>
+  </header>
+  <div id="notice"></div>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Buscar por nombre" aria-label="Buscar por nombre">
+    <select id="filter" aria-label="Filtrar por grupo muscular"><option value="">Todos los grupos</option></select>
+  </div>
+  <div id="list"></div>
+</main>
+
+<dialog id="formDlg">
+  <form class="dlg" id="form" method="dialog">
+    <h2 id="formTitle">Nuevo ejercicio</h2>
+    <div class="field">
+      <label for="fNombre">Nombre</label>
+      <input id="fNombre" required maxlength="80" placeholder="Sentadilla con barra">
+    </div>
+    <div class="field">
+      <label for="fGrupo">Grupo muscular</label>
+      <select id="fGrupo"></select>
+    </div>
+    <div class="field">
+      <label for="fDesc">Descripción</label>
+      <textarea id="fDesc" maxlength="2000" placeholder="Cómo se hace, series, repeticiones…"></textarea>
+    </div>
+    <div class="field" id="imgField">
+      <label>Imagen</label>
+      <div class="drop" id="drop">
+        <div id="preview"></div>
+        <span id="dropText">Toca para elegir una imagen</span>
+        <input id="fImg" type="file" accept="image/*" aria-label="Elegir imagen">
+      </div>
+    </div>
+    <p class="msg" id="formMsg" role="alert"></p>
+    <div class="row">
+      <button type="button" class="btn ghost" id="cancelBtn">Cancelar</button>
+      <button type="submit" class="btn primary" id="saveBtn">Guardar ejercicio</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="detailDlg">
+  <div class="dlg" id="detail"></div>
+</dialog>
+
+<script>
+const GRUPOS = ["Piernas","Glúteos","Pecho","Espalda","Hombros","Brazos","Core","Cardio","Cuerpo completo"];
+let db = null, assets = null, ejercicios = [], editing = null, pendingFile = null, removeImage = false;
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const imgUrl = id => "/_blob/" + id;
+
+GRUPOS.forEach(g => {
+  $("filter").insertAdjacentHTML("beforeend", `<option>${g}</option>`);
+  $("fGrupo").insertAdjacentHTML("beforeend", `<option>${g}</option>`);
+});
+
+function render(){
+  const q = $("search").value.trim().toLowerCase();
+  const g = $("filter").value;
+  const items = ejercicios
+    .filter(e => (!g || e.grupo === g) && (!q || e.nombre.toLowerCase().includes(q)))
+    .sort((a,b) => a.nombre.localeCompare(b.nombre, "es"));
+  $("count").textContent = ejercicios.length === 1 ? "1 ejercicio guardado" : `${ejercicios.length} ejercicios guardados`;
+
+  if(!ejercicios.length){
+    $("list").innerHTML = `<div class="empty"><strong>Aún no hay ejercicios</strong>Pulsa «Añadir ejercicio» para guardar el primero con su imagen.</div>`;
+    return;
+  }
+  if(!items.length){
+    $("list").innerHTML = `<div class="empty"><strong>Sin resultados</strong>Prueba con otro nombre o grupo muscular.</div>`;
+    return;
+  }
+  $("list").innerHTML = `<div class="grid">` + items.map(e => `
+    <button class="card" data-id="${esc(e.id)}">
+      <div class="thumb">${e.imagen ? `<img src="${imgUrl(esc(e.imagen))}" alt="" loading="lazy">` : "🏋️"}</div>
+      <div class="card-body"><h2>${esc(e.nombre)}</h2><span class="pill">${esc(e.grupo)}</span></div>
+    </button>`).join("") + `</div>`;
+  $("list").querySelectorAll(".card").forEach(c => c.onclick = () => openDetail(c.dataset.id));
+}
+
+function openDetail(id){
+  const e = ejercicios.find(x => x.id === id); if(!e) return;
+  $("detail").innerHTML = `
+    ${e.imagen ? `<img class="detail-img" src="${imgUrl(esc(e.imagen))}" alt="${esc(e.nombre)}">` : ""}
+    <h2 style="margin-bottom:.5rem">${esc(e.nombre)}</h2>
+    <span class="pill">${esc(e.grupo)}</span>
+    ${e.descripcion ? `<p class="detail-desc">${esc(e.descripcion)}</p>` : ""}
+    <p class="msg" id="detailMsg" role="alert"></p>
+    <div class="row">
+      ${db ? `<button class="btn danger" id="delBtn">Eliminar</button><span class="spacer"></span>
+      <button class="btn ghost" id="editBtn">Editar</button>` : ""}
+      <button class="btn primary" id="closeBtn">Cerrar</button>
+    </div>`;
+  $("closeBtn").onclick = () => $("detailDlg").close();
+  if($("editBtn")) $("editBtn").onclick = () => { $("detailDlg").close(); openForm(e); };
+  if($("delBtn")) $("delBtn").onclick = () => borrar(e);
+  $("detailDlg").showModal();
+}
+
+async function borrar(e){
+  if(!confirm(`¿Eliminar «${e.nombre}»? No se puede deshacer.`)) return;
+  try{
+    await db.doc("ejercicios/" + e.id).delete();
+    if(assets) [...new Set([e.imagen, e.imagenInicio, e.imagenFin].filter(Boolean))]
+      .forEach(id => assets.delete(id).catch(()=>{}));
+    $("detailDlg").close();
+  }catch(err){ $("detailMsg").textContent = "No se pudo eliminar. Inténtalo de nuevo."; }
+}
+
+function setPreview(src){
+  $("preview").innerHTML = src ? `<img src="${src}" alt="Vista previa">` : "";
+  $("dropText").textContent = src ? "Toca para cambiar la imagen" : "Toca para elegir una imagen";
+}
+
+function openForm(e = null){
+  editing = e; pendingFile = null; removeImage = false;
+  $("formTitle").textContent = e ? "Editar ejercicio" : "Nuevo ejercicio";
+  $("fNombre").value = e?.nombre ?? "";
+  $("fGrupo").value = e?.grupo ?? GRUPOS[0];
+  $("fDesc").value = e?.descripcion ?? "";
+  $("fImg").value = "";
+  $("formMsg").textContent = "";
+  $("imgField").style.display = assets ? "" : "none";
+  setPreview(e?.imagen ? imgUrl(e.imagen) : "");
+  $("formDlg").showModal();
+  $("fNombre").focus();
+}
+
+$("fImg").onchange = () => {
+  const f = $("fImg").files[0]; if(!f) return;
+  if(!f.type.startsWith("image/")){ $("formMsg").textContent = "Elige un archivo de imagen."; return; }
+  if(f.size > 20*1024*1024){ $("formMsg").textContent = "La imagen supera los 20 MB. Elige una más pequeña."; return; }
+  $("formMsg").textContent = "";
+  pendingFile = f;
+  setPreview(URL.createObjectURL(f));
+};
+
+$("cancelBtn").onclick = () => $("formDlg").close();
+
+$("form").onsubmit = async ev => {
+  ev.preventDefault();
+  const nombre = $("fNombre").value.trim();
+  if(!nombre){ $("formMsg").textContent = "Escribe un nombre para el ejercicio."; $("fNombre").focus(); return; }
+  $("saveBtn").disabled = true; $("saveBtn").textContent = "Guardando…";
+  try{
+    let imagen = editing?.imagen ?? null;
+    const oldImage = imagen;
+    if(pendingFile && assets){
+      const up = await assets.upload(pendingFile);
+      imagen = up.id;
+    }
+    const data = { nombre, grupo: $("fGrupo").value, descripcion: $("fDesc").value.trim(), imagen, actualizado: Date.now() };
+    if(editing) await db.doc("ejercicios/" + editing.id).update(data);
+    else await db.collection("ejercicios").doc().set(data);
+    if(oldImage && oldImage !== imagen && oldImage !== editing?.imagenInicio && assets) assets.delete(oldImage).catch(()=>{});
+    $("formDlg").close();
+  }catch(err){
+    const code = err?.code;
+    $("formMsg").textContent =
+      code === "quota_exceeded" ? "Se ha llenado el espacio. Elimina algún ejercicio o imagen y vuelve a intentarlo." :
+      code === "unsupported_type" ? "Ese formato de imagen no se admite. Prueba con JPG, PNG o WebP." :
+      "No se pudo guardar. Inténtalo de nuevo.";
+  }finally{
+    $("saveBtn").disabled = false; $("saveBtn").textContent = "Guardar ejercicio";
+  }
+};
+
+$("search").oninput = render;
+$("filter").onchange = render;
+$("addBtn").onclick = () => openForm();
+
+render();
+
+(async () => {
+  const [d, a] = await Promise.all([claude.use("db"), claude.use("assets")]);
+  db = d; assets = a;
+  if(!db){
+    $("count").textContent = "Base de datos no disponible";
+    $("notice").innerHTML = `<div class="notice">Abre esta página desde Claude para guardar y ver tus ejercicios.</div>`;
+    return;
+  }
+  $("addBtn").disabled = false;
+  db.collection("ejercicios").onSnapshot(snap => {
+    ejercicios = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    render();
+  }, () => {
+    $("notice").innerHTML = `<div class="notice">Se perdió la conexión con la base de datos. Recarga la página.</div>`;
+  });
+})();
+</script>
+</body>
+</html>
