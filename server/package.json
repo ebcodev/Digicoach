@@ -1,0 +1,15 @@
+{
+  "name": "digicoach-server",
+  "private": true,
+  "type": "module",
+  "description": "Runs Digicoach outside Claude: serves the app and calls the Claude API with a server-side key.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest"
+  }
+}

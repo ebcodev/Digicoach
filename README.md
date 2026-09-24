@@ -23,7 +23,24 @@ The app is published as a Claude artifact and relies on runtime capabilities tha
 - `sample` asks Claude for the exercise suggestions on the viewer's own Claude account, so no API key is stored in the page.
 - `user` identifies the viewer so their record can be kept private.
 
-Opened directly from GitHub or a static host, the page loads but can't save data or suggest exercises, because those capabilities aren't available outside Claude. To run it elsewhere you'd need to replace them with your own backend (a database, file storage for the images, and a server-side call to the Claude API that keeps the API key secret).
+Opened directly from GitHub or a static host, the page loads but can't save data or suggest exercises, because those capabilities aren't available outside Claude.
+
+## Running it outside Claude
+
+`server/` is a small Node server (Node 20.12 or later) that stands in for the Claude runtime:
+
+```bash
+cd server
+npm install
+cp .env.example .env   # then put your key in ANTHROPIC_API_KEY
+npm start              # open http://localhost:8080/
+```
+
+- `app/claude-shim.js` defines `window.claude` only when the page isn't running inside Claude, so the same `index.html` works in both places.
+- Exercise suggestions go to `POST /api/suggest`; the server calls the Claude API with the key from `server/.env`, which never reaches the browser. The model defaults to `claude-opus-5` and can be changed with `ANTHROPIC_MODEL`.
+- The catalog is read from `data/exercises.json`, and `/_blob/<id>` is served from `assets/exercises/`.
+- Each person's answers are kept in the browser's `localStorage`, so they stay on that device only.
+- `exercise-manager.html` still needs Claude, because it uploads images to the artifact.
 
 ## Regenerating the illustrations
 

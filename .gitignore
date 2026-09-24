@@ -3,3 +3,5 @@ __pycache__/
 tools/svg/
 *.png
 .DS_Store
+node_modules/
+.env
