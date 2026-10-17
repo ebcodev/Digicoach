@@ -4,7 +4,7 @@ A small bodyweight-training web app. The user answers a short form (email, age, 
 
 The app is available in English (default) and Spanish, with a light and a dark theme.
 
-https://github.com/user-attachments/assets/demo.mp4
+https://github.com/ebcodev/Digicoach/raw/refs/heads/main/assets/demo.mp4
 
 ## Project structure
 
