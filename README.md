@@ -4,7 +4,7 @@ A small bodyweight-training web app. The user answers a short form (email, age, 
 
 The app is available in English (default) and Spanish, with a light and a dark theme.
 
-<video src="assets/demo.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/demo.mp4
 
 ## Project structure
 
