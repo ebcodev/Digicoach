@@ -4,9 +4,13 @@ A small bodyweight-training web app. The user answers a short form (email, age, 
 
 The app is available in English (default) and Spanish, with a light and a dark theme.
 
-<video src="https://github.com/ebcodev/Digicoach/raw/refs/heads/main/assets/demo.mp4" controls muted playsinline width="100%">
-  Your browser can't play this video. <a href="assets/demo.mp4">Download demo.mp4</a>.
-</video>
+<p align="center">
+  <a href="assets/demo.mp4">
+    <img src="assets/demo.gif" alt="Digicoach demo (5x speed). Click for the full video." width="320">
+  </a>
+</p>
+
+<p align="center"><sub>Preview at 5× speed. <a href="assets/demo.mp4">Open the full video (1 min 23 s)</a>.</sub></p>
 
 ## Project structure
 
